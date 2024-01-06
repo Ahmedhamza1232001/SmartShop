@@ -1,4 +1,4 @@
-﻿namespace SmartShop.Models;
+﻿namespace SmartShop.Entities;
 
 public class Brand : BaseEntity
 {
