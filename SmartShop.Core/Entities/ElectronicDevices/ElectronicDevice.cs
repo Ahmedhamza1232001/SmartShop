@@ -1,4 +1,4 @@
-﻿using SmartShop.Models;
+﻿using SmartShop;
 
 public abstract class ElectronicDevice : Product
 {

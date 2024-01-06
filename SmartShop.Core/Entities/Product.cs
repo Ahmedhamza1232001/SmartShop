@@ -1,8 +1,7 @@
-﻿using SmartShop;
+﻿using SmartShop.Entities;
 using SmartShop.Enums;
-using SmartShop.Models;
 
-namespace test_api;
+namespace SmartShop;
 
 public abstract class Product : BaseEntity
 {
