@@ -12,6 +12,6 @@ public abstract class Product : BaseEntity
     public int SubCategoryId { get; set; }
     public required SubCategory SubCategory { get; set; }
     public int BrandId { get; set; }
-    public required Brand Brand { get; set; }
+    public required string Brand { get; set; }
     public Color Color { get; set; }
 }
