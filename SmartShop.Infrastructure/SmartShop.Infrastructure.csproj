@@ -23,4 +23,8 @@
     <Folder Include="Data\Config\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SmartShop.Core\SmartShop.Core.csproj" />
+  </ItemGroup>
+
 </Project>
