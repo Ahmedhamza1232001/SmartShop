@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 using SmartShop.Entities;
 
 namespace SmartShop.Infrastructure
@@ -10,14 +11,18 @@ namespace SmartShop.Infrastructure
             
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Product>().UseTpcMappingStrategy();
-        }
-
         public DbSet<Computer> Computers { get; set; }
         public DbSet<Mobile> Mobiles { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>().UseTpcMappingStrategy();
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
+
+       
     }
 }
