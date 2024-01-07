@@ -8,7 +8,6 @@ public record class ProductToReturnDto
     public int Quantity { get; set; }
     public int SubCategoryId { get; set; }
     public required string SubCategory { get; set; }
-    public int BrandId { get; set; }
     public required string Brand { get; set; }
     public string Color { get; set; } = string.Empty;
     public required string PictureUrl { get; set; }
