@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using SmartShop.Core;
 using SmartShop.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         }
     );
 });
-
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
