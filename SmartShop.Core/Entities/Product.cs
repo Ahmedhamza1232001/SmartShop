@@ -14,4 +14,5 @@ public abstract class Product : BaseEntity
     public int BrandId { get; set; }
     public required string Brand { get; set; }
     public Color Color { get; set; }
+    public required string PictureUrl { get; set; }
 }
