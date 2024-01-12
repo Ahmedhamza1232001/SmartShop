@@ -1,4 +1,6 @@
-﻿namespace SmartShop.Core;
+﻿using SmartShop.Core.Specifications;
+
+namespace SmartShop.Core;
 
 public class ProductsWithSubCategoriesSpecification : BaseSpecification<Product>
 {
