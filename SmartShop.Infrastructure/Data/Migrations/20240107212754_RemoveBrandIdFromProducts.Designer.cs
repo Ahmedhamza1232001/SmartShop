@@ -11,7 +11,7 @@ using SmartShop.Infrastructure;
 namespace SmartShop.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240107152657_RemoveBrandIdFromProducts")]
+    [Migration("20240107212754_RemoveBrandIdFromProducts")]
     partial class RemoveBrandIdFromProducts
     {
         /// <inheritdoc />
