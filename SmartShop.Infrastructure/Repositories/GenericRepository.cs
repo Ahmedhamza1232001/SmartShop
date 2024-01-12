@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartShop.Core;
-using static SmartShop.Core.ISpecification;
+using SmartShop.Core.Specifications;
 
 namespace SmartShop.Infrastructure;
 
