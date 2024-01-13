@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartShop.API</name>
+    </assembly>
+    <members>
+        <member name="M:SmartShop.API.ProductsController.GetProducts">
+            <summary>
+            Gets a list of products along with their subcategories.
+            </summary>
+            <returns>
+            Returns an HTTP 200 OK response with a list of product data in the specified format.
+            </returns>
+        </member>
+        <member name="M:SmartShop.API.ProductsController.GetProduct(System.Int32)">
+            <summary>
+            Gets a specific product along with its subcategory by the provided identifier.
+            </summary>
+            <param name="id">The unique identifier of the product.</param>
+            <returns>
+            Returns an HTTP 200 OK response with the product data in the specified format.
+            If no product is found with the given identifier, returns an HTTP 404 Not Found response.
+            </returns>
+        </member>
+    </members>
+</doc>
