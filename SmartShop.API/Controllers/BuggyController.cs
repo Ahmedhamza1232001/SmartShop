@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SmartShop.Entities;
 using SmartShop.Infrastructure;
 
 namespace SmartShop.API;
-
+[ApiExplorerSettings(IgnoreApi = true)]
 public class BuggyController : BaseApiController
 {
     private readonly ApplicationDbContext _context;
