@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using Microsoft.EntityFrameworkCore;
+using SmartShop.Core;
 using SmartShop.Entities;
 
 namespace SmartShop.Infrastructure
@@ -15,6 +16,8 @@ namespace SmartShop.Infrastructure
         public DbSet<Mobile> Mobiles { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
+        public DbSet<ProductBrand> ProductBrands { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
