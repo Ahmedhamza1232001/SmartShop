@@ -14,6 +14,7 @@ public static class ApplicationServicesExtensions
             IConfiguration config, IWebHostEnvironment hostingEnvironment)
     {
         services.AddEndpointsApiExplorer();
+        // need to change this because it will not work on the server side and make it in one file and take it to the output code 
         services.AddSwaggerGen(options =>
         {
             {
@@ -68,6 +69,14 @@ public static class ApplicationServicesExtensions
                 return new BadRequestObjectResult(errorResponse);
             };
         });
+
+        services.AddCors(opt =>
+            {
+                opt.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200");
+                });
+            });
 
 
 

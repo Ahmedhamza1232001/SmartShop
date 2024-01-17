@@ -1,4 +1,5 @@
-﻿using SmartShop.Entities;
+﻿using SmartShop.Core;
+using SmartShop.Entities;
 using SmartShop.Enums;
 
 namespace SmartShop;
@@ -11,7 +12,11 @@ public abstract class Product : BaseEntity
     public int Quantity { get; set; }
     public int SubCategoryId { get; set; }
     public required SubCategory SubCategory { get; set; }
-    public required string Brand { get; set; }
+    //need to make type act as subcategory but at the end of project
+    public int ProductTypeId { get; set; } 
+    public required ProductType ProductType { get; set; }  
+    public int ProductBrandId { get; set; }
+    public required ProductBrand ProductBrand { get; set; }
     public Color Color { get; set; }
     public required string PictureUrl { get; set; }
     public string Description { get; set; } = string.Empty;
